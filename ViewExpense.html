@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Expenses</title>
+  <style>
+    /* Common Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+    
+    /* View Expenses Page Styles */
+    .container {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    button, input[type="button"] {
+      border: none;
+      border-radius: 5px;
+      background: #1e3c72;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button:hover, input[type="button"]:hover {
+      background: #2a5298;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>View Expenses</h1>
+    <form action="ViewExpensesServlet" method="POST">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" required>
+
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" required>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="All Categories">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Others">Others</option>
+      </select>
+      
+      <button type="submit">Filter Expenses</button>
+      <a href="Homepage.html"><input type="button" value="Back"></a>
+    </form>
+  </div>
+</body>
+</html>

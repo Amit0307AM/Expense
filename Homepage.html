@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: Arial, sans-serif;
+    }
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input[type="submit"], input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #1e3c72;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover, input[type="button"]:hover {
+      background: #2a5298;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome</h1>
+    <a href="AddExpense.html"><input type="button" value="Add Expense"></a>
+    <a href="ViewExpense.html"><input type="button" value="View Expense"></a>
+    <a href="ReportServlet"><input type="button" value="Generate Report"></a>
+    <a href="Hey"><input type="button" value="Exit"></a>
+  </div>
+</body>
+</html>

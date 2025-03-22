@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Horizontally center content */
+      align-items: center;    /* Vertically center content */
+      height: 100vh;          /* Full viewport height */
+      background-color: #f0f0f0; /* Light gray background */
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Registatrion</h1>
+    <form action="ValidForInsertion" method="post">
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="email" placeholder="Enter Email" name="email" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <input type="password" placeholder="Confirm Password" name="password1" required>
+      <button type="submit" value="Save">Sign up</button>
+    </form>
+  </div>
+</body>
+</html>

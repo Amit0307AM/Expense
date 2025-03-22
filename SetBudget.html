@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Budget</title>
+    <style>
+        /* Center the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Container styling */
+        .container {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield; /* Remove arrows in Firefox */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .category-limits {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Set Budget</h1>
+        <form action="SetBudgetServlet" method="POST">
+            <!-- Monthly Budget Input -->
+            <label for="monthlyBudget">Monthly Budget:</label>
+            <input type="number" id="monthlyBudget" name="monthlyBudget" placeholder="Enter monthly budget" required>
+
+            <!-- Category-Specific Limits -->
+            <div class="category-limits">
+                <h3>Category Limits (Optional)</h3>
+                <label for="foodLimit">Food Limit:</label>
+                <input type="number" id="foodLimit" name="foodLimit" placeholder="Enter limit for Food">
+
+                <label for="travelLimit">Travel Limit:</label>
+                <input type="number" id="travelLimit" name="travelLimit" placeholder="Enter limit for Travel">
+
+                <label for="utilitiesLimit">Utilities Limit:</label>
+                <input type="number" id="utilitiesLimit" name="utilitiesLimit" placeholder="Enter limit for Utilities">
+
+                <label for="otherLimit">Other Limit:</label>
+                <input type="number" id="otherLimit" name="otherLimit" placeholder="Enter limit for Others">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Set Budget</button>
+        </form>
+    </div>
+</body>
+</html>
